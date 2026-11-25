@@ -7,4 +7,3 @@ Standalone demo reference service. See full deployment manual in suite.
 3. Browse `http://127.0.0.1:8203`.
 
 This is not a validated enterprise production compliance product.
-

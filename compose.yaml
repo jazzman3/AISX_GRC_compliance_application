@@ -1,0 +1,18 @@
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      MODULE: compliance
+      DB_PATH: /data/compliance.db
+    ports:
+      - "127.0.0.1:8203:8000"
+    volumes:
+      - app_data:/data
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
+    tmpfs: [/tmp]
+volumes:
+  app_data:
